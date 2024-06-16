@@ -1,0 +1,1 @@
+import{_ as a,c as e,o as i,a2 as l}from"./chunks/framework.Dzy1sSWx.js";const P=JSON.parse('{"title":"Food Menu","description":"","frontmatter":{},"headers":[],"relativePath":"food-menu.md","filePath":"food-menu.md"}'),t={name:"food-menu.md"},r=l("",71),n=[r];function o(u,h,s,d,c,b){return i(),e("div",null,n)}const m=a(t,[["render",o]]);export{P as __pageData,m as default};
