@@ -305,46 +305,70 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="2. What are the Types of Nodes in an HPC Cluster?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-compute-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Compute Node
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-head-node-login-node-management-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Head Node (Login Node / Management Node)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-storage-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Storage Node
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-gateway-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Gateway Node
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-io-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. I/O Node
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-service-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Service Node
+    </span>
+  </a>
+  
 </li>
         
       </ul>
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#types-of-nodes-in-an-hpc-cluster" class="md-nav__link">
-    <span class="md-ellipsis">
-      Types of Nodes in an HPC Cluster:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#access-the-hpc-cluster" class="md-nav__link">
-    <span class="md-ellipsis">
-      Access the HPC Cluster
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commands
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    <span class="md-ellipsis">
-      Project layout
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -418,51 +442,39 @@
 <p>A cluster consists of a large number of interconnected machines called as "NODE". The nodes running your programs are usually called Compute Node. To turn the nodes into a cluster we need three more ingredients: a network, data storage, and a queue manager. </p>
 <h3 id="2-what-are-the-types-of-nodes-in-an-hpc-cluster">2. What are the Types of Nodes in an HPC Cluster?</h3>
 <p>In an <strong>HPC (High-Performance Computing) cluster</strong>, a <strong>node</strong> is an individual computing unit within the cluster. Each node is typically a separate physical or virtual machine that contributes to the overall computing power of the cluster.</p>
-<h2 id="types-of-nodes-in-an-hpc-cluster"><strong>Types of Nodes in an HPC Cluster:</strong></h2>
-<ol>
-<li>Compute Node</li>
+<h4 id="1-compute-node">1. Compute Node</h4>
+<ul>
 <li>Runs the actual computational workloads.  </li>
 <li>Typically has powerful CPUs, GPUs, and large amounts of RAM.  </li>
-<li>
-<p>Managed by the job scheduler (e.g., OpenPBS, Slurm).</p>
-</li>
-<li>
-<p><strong>Head Node (Login Node / Management Node)</strong>  </p>
-</li>
+<li>Managed by the job scheduler (e.g., OpenPBS, Slurm).  </li>
+</ul>
+<h4 id="2-head-node-login-node-management-node">2. Head Node (Login Node / Management Node)</h4>
+<ul>
 <li>Provides user access for job submission and system management.  </li>
 <li>Runs job scheduling software like OpenPBS, Slurm, or Torque.  </li>
-<li>
-<p>Often does not run computational workloads.</p>
-</li>
-<li>
-<p><strong>Storage Node</strong>  </p>
-</li>
+<li>Often does not run computational workloads.</li>
+</ul>
+<h4 id="3-storage-node">3. Storage Node</h4>
+<ul>
 <li>Manages storage systems like NFS, Lustre, or GPFS.  </li>
-<li>
-<p>Provides high-speed access to shared data.</p>
-</li>
-<li>
-<p><strong>Gateway Node</strong>  </p>
-</li>
+<li>Provides high-speed access to shared data.</li>
+</ul>
+<h4 id="4-gateway-node">4. Gateway Node</h4>
+<ul>
 <li>Acts as a bridge between the internal HPC network and external users.  </li>
-<li>
-<p>Can be used for security purposes (firewall, SSH access, etc.).</p>
-</li>
-<li>
-<p><strong>I/O Node</strong>  </p>
-</li>
+<li>Can be used for security purposes (firewall, SSH access, etc.).</li>
+</ul>
+<h4 id="5-io-node">5. I/O Node</h4>
+<ul>
 <li>Handles input/output operations for efficient data movement.  </li>
-<li>
-<p>Often found in clusters using parallel file systems like Lustre.</p>
-</li>
-<li>
-<p><strong>Service Node</strong>  </p>
-</li>
+<li>Often found in clusters using parallel file systems like Lustre.</li>
+</ul>
+<h4 id="6-service-node">6. Service Node</h4>
+<ul>
 <li>Runs system services such as monitoring, logging, or job scheduling.</li>
-</ol>
-<p>Each node is connected via a <strong>high-speed interconnect</strong> (like InfiniBand or 10/100Gb Ethernet) to ensure efficient communication. In your case, since you're managing an <strong>OpenPBS cluster with Lustre and NFS</strong>, your setup likely includes <strong>compute nodes</strong>, <strong>a head node</strong>, and <strong>storage nodes</strong> for file sharing. </p>
-<p>Do you need help configuring or troubleshooting nodes in your cluster?</p>
-<h2 id="access-the-hpc-cluster">Access the HPC Cluster</h2>
+</ul>
+<p><em>Each node is connected via a </em><em>high-speed interconnect</em><em> (like InfiniBand or 10/100Gb Ethernet) to ensure efficient communication.</em></p>
+<h1 id="access-the-hpc-cluster">Access the HPC Cluster</h1>
 <p>Connecting to the HPC cluster MANIT BHOPAL</p>
 <h2 id="commands">Commands</h2>
 <ul>
